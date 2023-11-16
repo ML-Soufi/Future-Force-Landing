@@ -225,7 +225,7 @@ button {
     width: 100%;
     float: left;
     background-image: url(../images/banner-bg.png);
-    height: auto;
+    height:auto ;
     background-size: 100%;
 }
 
@@ -271,7 +271,7 @@ button {
 /* banner section start */
 
 .banner_section {
-    padding-top: 40px;
+    padding-top: 5px;
     padding-bottom: 70px;
     border-bottom: 80px solid #004AAD;
 }
@@ -967,6 +967,24 @@ textarea#comment::placeholder {
 }
 .copyright_text a:hover {
     color: #13a25d;
+}
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
 }
 
 
