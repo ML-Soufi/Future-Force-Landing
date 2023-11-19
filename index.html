@@ -32,8 +32,35 @@
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.all.min.js"></script>
+      <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.min.css" rel="stylesheet">
+      <style>
+    #logoContaineros {
+            display: flex;
+            justify-content: center;
+            /* Optional: Add some padding or margin if needed */
+            padding: 20px;
+        }
+
+        /* Style for the logos */
+        .logos {
+         width: 200px;
+          height: 100px;
+           object-fit: contain; 
+           mix-blend-mode: multiply;
+           margin-bottom: 5rem;
+            transition: transform 0.3s ease-in-out;
+        }
+         /* Expansion effect on hover */
+         .logos:hover {
+             transform: scale(1.2); /* Adjust the scale factor as needed */
+         }
+     </style>
+     
    </head>
    <body>
+   
+
       <!--header section start -->
       <div class="header_section">
          <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -105,7 +132,7 @@
                                     <h1 class="banner_taital" style="color: #004AAD;">Digital Excellence Everytime<span style="color: #26890D;">.</span></h1>
                                     <p class="banner_text"> Fournir le meilleur service en matière de numérique, c'est notre engagement continu. Nous nous efforçons constamment d'aller au-delà des attentes, mettant en œuvre des solutions innovantes et adaptées pour chaque projet. Avec notre expertise, nous façonnons un paysage numérique où l'excellence devient la norme, offrant ainsi des résultats exceptionnels à chaque étape de votre parcours</p>
                                     <div class="btn_main">
-                                       <div class="contact_bt active "><a href="#">Contact Us</a></div>
+                                       <div class="contact_bt active "><a href="#contact">Contact Us</a></div>
                                     </div>
                                  </div>
                               </div>
@@ -116,7 +143,7 @@
                                     <h1 class="banner_taital" style="color: #004AAD;">Creative & Digital Mastery, Tailored Solutions Unleashed<span style="color: #26890D;">.</span></h1>
                                     <p class="banner_text">Élargissant vos horizons avec notre agence créative et digitale. Des services innovants pour un impact durable.</p>
                                     <div class="btn_main">
-                                       <div class="contact_bt active "><a href="#">Contact Us</a></div>
+                                       <div class="contact_bt active "><a href="#contact">Contact Us</a></div>
                                     </div>
                                  </div>
                               </div>
@@ -203,7 +230,7 @@
                </div>
                <div class="col-md-6">
                   <h1 class="blog_taital" style="color: #004AAD;">Faites croître facilement votre entreprise, gagnez plus d'argent<span style="color: #26890D;">.</span></h1>
-                  <p class="blog_text">Grâce à la technologie et aux services numériques, votre entreprise peut prospérer. L'intégration stratégique de ces outils offre une croissance tangible en automatisant les processus, améliorant la productivité et optimisant les interactions client. Du commerce électronique à la gestion de la relation client, cette approche moderne transforme votre entreprise et crée un environnement propice à l'expansion, où l'agilité et la pertinence sont les clés du succès. </p>
+                  <p class="blog_text" style="margin-bottom: 2rem;">Grâce à la technologie et aux services numériques, votre entreprise peut prospérer. L'intégration stratégique de ces outils offre une croissance tangible en automatisant les processus, améliorant la productivité et optimisant les interactions client. Du commerce électronique à la gestion de la relation client, cette approche moderne transforme votre entreprise et crée un environnement propice à l'expansion, où l'agilité et la pertinence sont les clés du succès. </p>
                </div>
             </div>
          </div>
@@ -212,21 +239,30 @@
 
       <!-- blog section end -->
        <!-- contact section start -->
-       <div class="contact_section layout_padding">
+       <div class="contact_section layout_padding" id="contact">
          <div class="container">
-            <h1 class="contact_taital">Get In Touch</h1>
-            <p class="contact_text">majority have suffered alteration in some form, by injected humour, or </p>
+            <h1 class="banner_taital" style="color: #004AAD;">Get In Touch<span style="color: #26890D;">.</span></h1>
             <div class="contact_section_2 layout_padding">
                <div class="row">
                   <div class="col-md-6">
                      <div class="contact_main">
-                        <input type="text" class="mail_text" placeholder="Full Name" name="Full Name">
-                        <input type="text" class="mail_text" placeholder="Phone Number" name="Phone Number">
-                        <input type="text" class="mail_text" placeholder="Email" name="Email">
-                        <textarea class="massage-bt" placeholder="Message" rows="5" id="comment" name="Massage"></textarea>
-                        <div class="send_bt"><a href="#">SEND</a></div>
+                        <form id="contactForm">
+                           <input type="text" class="mail_text" placeholder="Full Name" name="name">
+                           <input type="text" class="mail_text" placeholder="Phone Number" name="phone">
+                           <input type="text" class="mail_text" placeholder="Email" name="email">
+                           <textarea class="massage-bt" placeholder="Message" rows="5" id="comment" name="message"></textarea>
+                           <button class="send_bt" style="width: 100%;
+                           float: left;
+                           font-size: 16px;
+                           color: #ffffff;
+                           background-color: #26890D;
+                           text-align: center;
+                           padding: 10px 0px;
+                           border-radius: 40px;  " type="button" onclick="submitForm()">SEND</button>
+                       </form>
+                       <div id="responseMessage"></div>
                      </div>
-                  </div>
+                 </div>
                   <div class="col-md-6">
                      <div class="map_main">
                         <div class="map-responsive">
@@ -237,31 +273,36 @@
                </div>
             </div>
          </div>
+         
+
       </div>
       <!-- contact section end -->
-      <!-- events section start -->
-      <div class="events_section layout_padding">
-         <div class="container">
-            <h1 class="about_taital">Partenaires</h1>
-            <p class="about_text">It is a long established fact that a reader will be distracted by the readable content of a page when</p>
-            <div class="events_section_2">
-               <div class="events_bg">
-                  <div class="play_icon"><a href="#"><img src="images/play-icon.png"></a></div>
-               </div>
-            </div>
-            <div class="seemore_bt"><a href="#">See More</a></div>
-         </div>
+      
+      <div class="container" style="text-align: center;margin-top: 135rem">
+      <h1 class="banner_taital" style="color: #004AAD;">Our Partners<span style="color: #26890D;">.</span></h1>
+
+
+      <!-- Replace the image sources (src) with the URLs of your partner logos -->
+      <div id="logoContaineros">
+
+      <img class="logos"  src="images/image.png" alt="Partner 2 Logo">
+      <img class="logos"  src="images/image_1.png" alt="Partner 1 Logo">
+      <img class="logos" style="margin-right: 3rem;" src="images/image_2.jpg" alt="Partner 1 Logo">
+      <img class="logos"  src="images/image_3.png" alt="Partner 1 Logo">
+ 
       </div>
-      <!-- events section end -->
-     
+      
+      <!-- Add more <img> tags for additional partners -->
+   </div>
+    
 
       <!-- footer section start -->
       <div class="footer_section layout_padding">
          <div class="container">
             <div class="location_main">
-               <div class="location_text"><img src="images/map-icon.png"><span class="padding_left_10"><a href="#">Location</a></span></div>
-               <div class="location_text center"><img src="images/call-icon.png"><span class="padding_left_10"><a href="#">Call :06 63 32 01 48</a></span></div>
-               <div class="location_text right"><img src="images/mail-icon.png"><span class="padding_left_10"><a href="#">contact@futureforce.ma</a></span></div>
+               <div class="location_text"><img src="images/map-icon.png"><span class="padding_left_10"><a href="#contact">Lot Assada N85,Ain Attiq-Temara,Maroc</a></span></div>
+               <div class="location_text center"><img src="images/call-icon.png"><span class="padding_left_10"><a href="#">06 63 32 01 48</a></span></div>
+               <div class="location_text right"><img src="images/mail-icon.png"><span class="padding_left_10"><a href="#contact">contact@futureforce.ma</a></span></div>
             </div>
             <div class="footer_section_2">
                <div class="row">
@@ -282,7 +323,7 @@
                            <li><a href="#"><img src="images/fb-icon.png"></a></li>
                            <li><a href="#"><img src="images/twitter-icon.png"></a></li>
                            <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
-                           <li><a href="#"><img src="images/instagram-icon.png"></a></li>
+                           <li><a href="https://instagram.com/futureforce_?igshid=OGQ5ZDc2ODk2ZA=="><img src="images/instagram-icon.png"></a></li>
                            <li><a href="#"><img src="images/youtub-icon.png"></a></li>
                         </ul>
                      </div>
@@ -315,5 +356,36 @@
 <a href="https://api.whatsapp.com/send?phone=+212663320148&text=Merci d’avoir contacté Future Force ! Dites-nous en quoi nous pouvons vous aider." class="float" target="_blank">
 <i class="fa fa-whatsapp my-float"></i>
 </a>
+<script>
+   function submitForm() {
+    var form = document.getElementById('contactForm');
+    var formData = new FormData(form);
+
+    fetch('https://script.google.com/macros/s/AKfycbzo32bY6nDbK95mn3fKcmEacPV8ciZuUJ1wawtkyyqhmSZe5CtOtJR67vbpnqeiXfb4/exec', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+      //   document.getElementById('responseMessage').innerHTML = data;
+        Swal.fire({
+  title: "Good job!",
+  text: data,
+  icon: "success"
+});
+    })
+    .catch(error => {
+      //   console.error('Error:', error);
+      Swal.fire({
+  title: "Good job!",
+  text: "You clicked the button!",
+  icon: "error"
+});
+    });
+}
+
+</script>
    </body>
+   
 </html>
+

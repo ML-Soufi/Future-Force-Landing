@@ -32,10 +32,31 @@
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <style>
+         #logoContaineros {
+                 display: flex;
+                 justify-content: center;
+                 /* Optional: Add some padding or margin if needed */
+                 padding: 20px;
+             }
+     
+             /* Style for the logos */
+             .logos {
+              width: 200px;
+               height: 100px;
+                object-fit: contain; 
+                mix-blend-mode: multiply;
+                margin-bottom: 5rem;
+                 transition: transform 0.3s ease-in-out;
+             }
+              /* Expansion effect on hover */
+              .logos:hover {
+                  transform: scale(1.2); /* Adjust the scale factor as needed */
+              }
+          </style>
    </head>
    <body>
       <!--header section start -->
-      <div class="header_section">
          <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="logo"><a href="index.html"><img src="images/logo.png" height="100" width="250"></a></div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,57 +85,64 @@
                </ul>
             </div>
          </nav>
-      </div>
+     
       <!--header section end -->
       <!-- events section start -->
-      <div class="events_section layout_padding">
-         <div class="container">
-            <h1 class="events_taital">Follow Our Video For Solved Your Problem</h1>
-            <div class="events_section_2">
-               <div class="events_bg">
-                  <div class="play_icon"><a href="#"><img src="images/play-icon.png"></a></div>
-               </div>
-            </div>
-            <div class="seemore_bt"><a href="#">See More</a></div>
+      <div class="container" style="text-align: center;margin-top: 5rem">
+         <h1 class="banner_taital" style="color: #004AAD;">Our Partners<span style="color: #26890D;">.</span></h1>
+   
+   
+         <!-- Replace the image sources (src) with the URLs of your partner logos -->
+         <div id="logoContaineros">
+   
+         <img class="logos"  src="images/image.png" alt="Partner 2 Logo">
+         <img class="logos"  src="images/image_1.png" alt="Partner 1 Logo">
+         <img class="logos" style="margin-right: 3rem;" src="images/image_2.jpg" alt="Partner 1 Logo">
+         <img class="logos"  src="images/image_3.png" alt="Partner 1 Logo">
+    
          </div>
+         
+         <!-- Add more <img> tags for additional partners -->
       </div>
       <!-- events section end -->
       <!-- footer section start -->
-      <div class="footer_section layout_padding">
-         <div class="container">
-            <div class="location_main">
-               <div class="location_text"><img src="images/map-icon.png"><span class="padding_left_10"><a href="#">Location</a></span></div>
-               <div class="location_text center"><img src="images/call-icon.png"><span class="padding_left_10"><a href="#">Call ; 01 1234567890</a></span></div>
-               <div class="location_text right"><img src="images/mail-icon.png"><span class="padding_left_10"><a href="#">demo@gmail.com</a></span></div>
-            </div>
-            <div class="footer_section_2">
-               <div class="row">
-                  <div class="col-lg-4">
-                     <h2 class="footer_taital">About</h2>
-                     <p class="footer_text">There are many variations of passages of Lorem Ipsum available, but the majority havThere are many variations of passages of Lorem Ipsum available, but the majority hav</p>
-                  </div>
-                  <div class="col-lg-4">
-                     <h2 class="footer_taital">Services Link</h2>
-                     <p class="footer_text">There are many variations of passages of Lorem Ipsum available, but the majority havThere are many variations of passages of Lorem Ipsum available, but the majority hav</p>
-                  </div>
-                  <div class="col-lg-4">
-                     <h2 class="footer_taital">Subscribe</h2>
-                     <input type="text" class="Enter_text" placeholder="Enter Your Email" name="Enter Your Email">
-                     <div class="subscribe_bt"><a href="#">Subscribe</a></div>
-                     <div class="social_icon">
-                        <ul>
-                           <li><a href="#"><img src="images/fb-icon.png"></a></li>
-                           <li><a href="#"><img src="images/twitter-icon.png"></a></li>
-                           <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
-                           <li><a href="#"><img src="images/instagram-icon.png"></a></li>
-                           <li><a href="#"><img src="images/youtub-icon.png"></a></li>
-                        </ul>
-                     </div>
+    <!-- footer section start -->
+    <div class="footer_section layout_padding">
+      <div class="container">
+         <div class="location_main">
+            <div class="location_text"><img src="images/map-icon.png"><span class="padding_left_10"><a href="#">Lot Assada N85,Ain Attiq-Temara,Maroc</a></span></div>
+            <div class="location_text center"><img src="images/call-icon.png"><span class="padding_left_10"><a href="#">06 63 32 01 48</a></span></div>
+            <div class="location_text right"><img src="images/mail-icon.png"><span class="padding_left_10"><a href="#">contact@futureforce.ma</a></span></div>
+         </div>
+         <div class="footer_section_2">
+            <div class="row">
+               <div class="col-lg-4">
+                  <h2 class="footer_taital">About</h2>
+                  <p class="footer_text">Découvrez l'ère de la révolution numérique, offrant des opportunités infinies et transcendant les frontières pour tous ceux qui embrassent le pouvoir de la technologie.</p>
+               </div>
+               <div class="col-lg-4">
+                  <h2 class="footer_taital">Subscribe</h2>
+                  <p class="footer_text">Rejoignez notre liste d'abonnés pour recevoir les dernières nouvelles et offres spéciales</p>
+               </div>
+               <div class="col-lg-4">
+                  <h2 class="footer_taital">Subscribe</h2>
+                  <input type="text" class="Enter_text" placeholder="Enter Your Email" name="Enter Your Email">
+                  <div class="subscribe_bt"><a href="#">Subscribe</a></div>
+                  <div class="social_icon">
+                     <ul>
+                        <li><a href="#"><img src="images/fb-icon.png"></a></li>
+                        <li><a href="#"><img src="images/twitter-icon.png"></a></li>
+                        <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
+                        <li><a href="https://instagram.com/futureforce_?igshid=OGQ5ZDc2ODk2ZA=="><img src="images/instagram-icon.png"></a></li>
+                        <li><a href="#"><img src="images/youtub-icon.png"></a></li>
+                     </ul>
                   </div>
                </div>
             </div>
          </div>
       </div>
+   </div>
+   <!-- footer section end -->
       <!-- footer section end -->
       <!-- copyright section start -->
       <div class="copyright_section">
@@ -135,5 +163,9 @@
       <!-- javascript --> 
       <script src="js/owl.carousel.js"></script>
       <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <a href="https://api.whatsapp.com/send?phone=+212663320148&text=Merci d’avoir contacté Future Force ! Dites-nous en quoi nous pouvons vous aider." class="float" target="_blank">
+      <i class="fa fa-whatsapp my-float"></i>
+      </a>
    </body>
 </html>
